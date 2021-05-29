@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/ecomm-dashhboard/static/css/main.cd6b50d0.chunk.css",
+    "main.js": "/ecomm-dashhboard/static/js/main.084d36e6.chunk.js",
+    "main.js.map": "/ecomm-dashhboard/static/js/main.084d36e6.chunk.js.map",
+    "runtime-main.js": "/ecomm-dashhboard/static/js/runtime-main.86b1b93e.js",
+    "runtime-main.js.map": "/ecomm-dashhboard/static/js/runtime-main.86b1b93e.js.map",
+    "static/js/2.5a09a376.chunk.js": "/ecomm-dashhboard/static/js/2.5a09a376.chunk.js",
+    "static/js/2.5a09a376.chunk.js.map": "/ecomm-dashhboard/static/js/2.5a09a376.chunk.js.map",
+    "static/js/3.6f651929.chunk.js": "/ecomm-dashhboard/static/js/3.6f651929.chunk.js",
+    "static/js/3.6f651929.chunk.js.map": "/ecomm-dashhboard/static/js/3.6f651929.chunk.js.map",
+    "index.html": "/ecomm-dashhboard/index.html",
+    "static/css/main.cd6b50d0.chunk.css.map": "/ecomm-dashhboard/static/css/main.cd6b50d0.chunk.css.map",
+    "static/js/2.5a09a376.chunk.js.LICENSE.txt": "/ecomm-dashhboard/static/js/2.5a09a376.chunk.js.LICENSE.txt",
+    "static/media/capres.0ee1930d.jpg": "/ecomm-dashhboard/static/media/capres.0ee1930d.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.86b1b93e.js",
+    "static/js/2.5a09a376.chunk.js",
+    "static/css/main.cd6b50d0.chunk.css",
+    "static/js/main.084d36e6.chunk.js"
+  ]
+}
