@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Layout from "./components/helpers/Layout";
+import Layout from "./components/helpers/LayoutCopy";
 import Home from "./components/pages/Home";
 import Login from "./components/pages/Login";
 import Register from "./components/pages/Register";
@@ -12,6 +12,9 @@ import Register from "./components/pages/Register";
 import About from "./components/pages/About";
 import Socios from "./components/pages/Socios";
 import Contacto from "./components/pages/Contacto";
+import Delegados from "./components/pages/Delegados";
+import Servicios from "./components/pages/Servicios";
+import Descargas from "./components/pages/Descargas";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -26,6 +29,15 @@ ReactDOM.render(
           </Route>
           <Route path="/socios">
             <Socios />
+          </Route>
+          <Route path="/delegados">
+            <Delegados />
+          </Route>
+          <Route path="/servicios">
+            <Servicios />
+          </Route>
+          <Route path="/descargas">
+            <Descargas />
           </Route>
           <Route path="/contacto">
             <Contacto />
