@@ -1,7 +1,7 @@
 import React from "react";
 
 function Socios() {
-  return <div>Socios Page</div>;
+  return <div className="pt-20">Socios Page</div>;
 }
 
 export default Socios;

@@ -1,7 +1,7 @@
 import React from "react";
 
 function Delegados() {
-  return <div>Delegados Page</div>;
+  return <div className="pt-20">Delegados Page</div>;
 }
 
 export default Delegados;

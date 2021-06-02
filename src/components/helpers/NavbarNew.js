@@ -8,7 +8,7 @@ function NavbarNew() {
     setIsOpen(!isOpen);
   };
   return (
-    <nav className="bg-yellow-300 sm:flex z-40 sm:justify-between sm:items-center sm:px-4 sm:py-2 relative">
+    <nav className="bg-yellow-300 sm:flex w-full sm:justify-between sm:items-center sm:px-4 sm:py-2 fixed z-10">
       <div className="flex items-center justify-between px-4 py-2 sm:p-0">
         <div className="pl-0">
           <Link to="/" className="">
@@ -67,46 +67,59 @@ function NavbarNew() {
         } px-2 pt-2 pb-2 pr-2 text-gray-600 sm:flex`}
       >
         <Link
-          className=" block pr-2 px-2 py-1 font-semibold rounded   focus:bg-gray-500 focus:text-gray-200 hover:bg-gray-500 hover:text-gray-200"
+          className=" block pr-2 px-2 py-1 font-semibold rounded   focus:bg-gray-500 focus:text-gray-200 hover:bg-gray-500 hover:text-gray-100"
           to="/"
         >
           Inicio
         </Link>
         <Link
-          className="mt-1 block px-2 py-1 font-semibold rounded   focus:bg-gray-500 focus:text-gray-200 hover:bg-gray-500 hover:text-gray-200 sm:mt-0 sm:ml-2"
+          className="mt-1 block px-2 py-1 font-semibold rounded   focus:bg-gray-500 focus:text-gray-200 hover:bg-gray-500 hover:text-gray-100 sm:mt-0 sm:ml-2"
           to="/about"
         >
           Nosotros
         </Link>
         <Link
-          className="mt-1 block px-2 py-1 font-semibold rounded   focus:bg-gray-500 focus:text-gray-200 hover:bg-gray-500 hover:text-gray-200 sm:mt-0 sm:ml-2"
+          className="mt-1 block px-2 py-1 font-semibold rounded   focus:bg-gray-500 focus:text-gray-200 hover:bg-gray-500 hover:text-gray-100 sm:mt-0 sm:ml-2"
           to="/socios"
         >
           Asociados
         </Link>
         <Link
-          className="mt-1 block px-2 py-1 font-semibold rounded   focus:bg-gray-500 focus:text-gray-200 hover:bg-gray-500 hover:text-gray-200 sm:mt-0 sm:ml-2"
+          className="mt-1 block px-2 py-1 font-semibold rounded   focus:bg-gray-500 focus:text-gray-200 hover:bg-gray-500 hover:text-gray-100 sm:mt-0 sm:ml-2"
           to="/delegados"
         >
           Delegados
         </Link>
         <Link
-          className="mt-1 block px-2 py-1 font-semibold rounded   focus:bg-gray-500 focus:text-gray-200 hover:bg-gray-500 hover:text-gray-200 sm:mt-0 sm:ml-2"
+          className="mt-1 block px-2 py-1 font-semibold rounded   focus:bg-gray-500 focus:text-gray-200 hover:bg-gray-500 hover:text-gray-100 sm:mt-0 sm:ml-2"
           to="/servicios"
         >
           Servicios
         </Link>
         <Link
-          className="mt-1 block px-2 py-1 font-semibold rounded   focus:bg-gray-500 focus:text-gray-200 hover:bg-gray-500 hover:text-gray-200 sm:mt-0 sm:ml-2"
+          className="mt-1 block px-2 py-1 font-semibold rounded   focus:bg-gray-500 focus:text-gray-200 hover:bg-gray-500 hover:text-gray-100 sm:mt-0 sm:ml-2"
           to="/descargas"
         >
           Descargas
         </Link>
         <Link
-          className="mt-1 block px-2 py-1 font-semibold rounded   focus:bg-gray-500 focus:text-gray-200 hover:bg-gray-500 hover:text-gray-200 sm:mt-0 sm:ml-2"
+          className="mt-1 block px-2 py-1 font-semibold rounded   focus:bg-gray-500 focus:text-gray-200 hover:bg-gray-500 hover:text-gray-100 sm:mt-0 sm:ml-2"
           to="/contacto"
         >
           Contacto
+        </Link>
+      </div>
+      <div
+        className={` ${
+          isOpen ? "block" : "hidden"
+        } px-2 pt-2 pb-2 pr-2 text-gray-600 sm:flex`}
+      >
+        <Link
+          to="/login"
+          className="text-gray-500 bg-transparent border border-solid border-gray-500 hover:bg-gray-500 hover:text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          type="button"
+        >
+          Iniciar sesión
         </Link>
       </div>
     </nav>
