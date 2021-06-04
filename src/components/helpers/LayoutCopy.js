@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import MenuMobile from "./MenuMobile";
 /* import Navbar from "./Navbar"; */
 import NavbarNew from "./NavbarNew";
+import NavbarNew2 from "./NavbarNew2";
+import pattern from "../../assets/images/squares.svg";
 
 function Layout({ children }) {
   const [isOpen, setisOpen] = useState(false);
@@ -21,11 +23,11 @@ function Layout({ children }) {
   });
 
   return (
-    <div className=" h-screen font-sans leading-normal tracking-normal bg-layout-pattern">
-      <NavbarNew />
+    <header className=" leading-normal tracking-normal">
+      <NavbarNew2 />
       {/* {isOpen && <MenuMobile mobileOpen={toggleOpen} />} */}
       {children}
-    </div>
+    </header>
   );
 }
 

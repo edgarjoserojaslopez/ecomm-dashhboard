@@ -1,15 +1,16 @@
 /* import React, { useEffect, useState } from "react"; */
 /* import MenuMobile from "./MenuMobile"; */
-import Navbar from "./Navbar";
-import NavbarNew from "./NavbarNew";
+import NavbarNew2 from "./NavbarNew2";
 /* import NavbarTim from "./NavbarTim"; */
 function Layout({ children }) {
   return (
-    <div className=" min-h-screen bg-layout-pattern">
-      <NavbarNew />
-      {/* {isOpen && <MenuMobile mobileOpen={toggleOpen} />} */}
-      {children}
-    </div>
+    <>
+      <header className="mt-12 md:mt-20 h-screen bg-layout-pattern">
+        <NavbarNew2 />
+
+        {children}
+      </header>
+    </>
   );
 }
 
