@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+
+import RightSidebar from "../../helpers/RightSidebar";
 
 function About() {
   function myFunction() {
@@ -29,7 +30,7 @@ function About() {
           <div className=" w-full md:flex ">
             <div className="w-full md:w-3/5 md:pl-6  p-8 ">
               {/* -- Hero section -- */}
-              <h4 className="mb-3 font-bold">Capres</h4>
+
               <p className="mb-2">
                 La Caja de Ahorro y previsión de los Empleados del SENIAT
                 (CAPRES) es una asociación civil sin fines de lucro, con
@@ -201,35 +202,7 @@ function About() {
               </div>
             </div>
             <div className="w-full md:w-2/5 md:pl-6  p-8 ml-8 ">
-              <div className="rounded bg-white shadow max-w-md mx-auto mb-6">
-                {/* <!-- header --> */}
-                <header className="p-4 bg-blue-600">
-                  <h3 className="text-3xl font-medium text-gray-50">
-                    Historia
-                  </h3>
-                </header>
-                {/* <!-- section --> */}
-                <section className="p-4 bg-white text-blue-500  shadow-xl rounded font-semibold flex flex-col">
-                  <Link to="/historia">Historia de CAPRES</Link>
-                  <Link to="/junta">Junta Directiva</Link>
-                  <Link to="/organizacion">Organización Administrativa</Link>
-                  <Link to="/estatutos">Estatutos CAPRES</Link>
-                </section>
-              </div>
-              <div className="rounded bg-white shadow max-w-md mx-auto">
-                {/* <!-- header --> */}
-                <header className="p-4 bg-blue-600">
-                  <h3 className="text-3xl font-medium text-gray-50">
-                    Marco Legal
-                  </h3>
-                </header>
-                {/* <!-- section --> */}
-                <section className="p-4 bg-white text-blue-500  shadow-xl rounded font-semibold flex flex-col">
-                  <Link to="/historia">Ley Cajas de Ahorro</Link>
-                  <Link to="/junta">Estatutos CAPRES</Link>
-                </section>
-                {/* <!-- footer --> */}
-              </div>
+              <RightSidebar />
             </div>
           </div>
         </section>

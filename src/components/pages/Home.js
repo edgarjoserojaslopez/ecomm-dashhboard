@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Login from "./Login";
 import HeroImage from "../../assets/images/img6.jpg";
 
 function Home() {
+  useEffect(() => {
+    document.title = "Capres";
+  });
   return (
     <div className="h-full ">
       {/* <!-- component --> */}
@@ -26,10 +29,10 @@ function Home() {
               maestras que son su razón de ser.
             </p>
 
-            <div className="mt-6">
+            <div className="mt-8">
               <Link
                 to="/register"
-                className="bg-blue-500 rounded-md font-bold text-2xl text-white text-center px-4 py-3 transition duration-300 ease-in-out hover:bg-blue-600 mr-2"
+                className="uppercase bg-transparent rounded-none border border-gray-100 font-bold text-xl text-white text-center px-4 py-3 transition duration-300 ease-in-out hover:bg-yellow-300 hover:border-yellow-300 hover:text-blue-500"
               >
                 Crear una cuenta
               </Link>

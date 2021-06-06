@@ -1,52 +1,118 @@
-import React from "react";
+import { ChevronDownIcon } from "@heroicons/react/solid";
+import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/capres.jpg";
+import { createPopper } from "@popperjs/core";
+
 function NavbarNew2() {
+  /* Toggle Function */
+  const [isOpen, setIsOpen] = useState(false);
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
+  /* Dropdown SettingUp */
+  const [dropdownPopoverShow, setDropdownPopoverShow] = React.useState(false);
+  const btnDropdownRef = React.createRef();
+  const popoverDropdownRef = React.createRef();
+  const openDropdownPopover = () => {
+    createPopper(btnDropdownRef.current, popoverDropdownRef.current, {
+      placement: "bottom-start",
+      modifiers: [
+        {
+          name: "offset",
+          options: {
+            offset: [0, 20],
+          },
+        },
+      ],
+    });
+    setDropdownPopoverShow(true);
+  };
+  const closeDropdownPopover = () => {
+    setDropdownPopoverShow(false);
+  };
+  /* Dropdown SettingUp Starts here */
+
   return (
-    <nav className="flex items-center justify-between font-medium p-4 z-40 w-full fixed mx-auto bg-blue-600">
+    <nav className="flex items-center justify-between font-medium p-4 z-40 w-full fixed mx-auto bg-blue-500">
       <Link to="/" className="">
         <img className="h-14" src={logo} alt="logo" />
       </Link>
-      <div className="text-lg text-gray-100 hidden md:flex ml-12">
+
+      <div className="text-lg hidden md:flex ml-12 ">
         <Link
           to="/"
-          className="block mt-4 md:inline-block  hover:text-yellow-300 text-gray-100 md:mt-0 mr-10"
+          className="block mt-4 md:inline-block   hover:text-gray-50  text-gray-50 md:mt-0 mr-10"
         >
           Inicio
         </Link>
         <Link
           to="/about"
-          className="block mt-4 md:inline-block text-gray-100 md:mt-0 mr-10"
+          className="block mt-4 md:inline-block text-gray-50 md:mt-0 mr-10"
         >
           Nosotros
         </Link>
         <Link
           to="/socios"
-          className="block mt-4 md:inline-block text-gray-100 md:mt-0 mr-10"
+          className="block mt-4 md:inline-block text-gray-50 md:mt-0 mr-10"
         >
           Asociados
         </Link>
         <Link
           to="/delegados"
-          className="block mt-4 md:inline-block text-gray-100 md:mt-0 mr-10"
+          className="block mt-4 md:inline-block text-gray-50 md:mt-0 mr-10"
         >
           Delegados
         </Link>
-        <Link
-          to="/servicios"
-          className="block mt-4 md:inline-block text-gray-100 md:mt-0 mr-10"
+        <button
+          className="block md:inline-block mt-4  text-gray-50 md:mt-0 mr-10 outline-none focus:outline-none 
+          ease-linear transition-all duration-150"
+          type="button"
+          ref={btnDropdownRef}
+          onClick={() => {
+            dropdownPopoverShow
+              ? closeDropdownPopover()
+              : openDropdownPopover();
+          }}
         >
           Servicios
-        </Link>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5 block md:inline-block pl-1"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fillRule="evenodd"
+              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              clipRule="evenodd"
+            />
+          </svg>
+        </button>
+        <div
+          ref={popoverDropdownRef}
+          className={
+            (dropdownPopoverShow ? "flex flex-col " : "hidden ") +
+            "text-base z-50 float-left py-2  text-left text-gray-100 pl-2 rounded rounded-t-none shadow-lg  bg-blue-500"
+          }
+          style={{ minWidth: "12rem" }}
+        >
+          <Link to="/servicios/haberes">Retiro de Haberes</Link>
+          <Link to="/servicios/personal">Préstamos Personales</Link>
+          <Link to="/servicios/vivienda">Préstamos de Vivienda</Link>
+          <Link to="/servicios/vehiculo">Préstamo de Vehiculo</Link>
+          <Link to="/servicios/fondo">Fondo Especial (FEP)</Link>
+        </div>
+
         <Link
           to="/descargas"
-          className="block mt-4 md:inline-block text-gray-100 md:mt-0 mr-10"
+          className="block mt-4 md:inline-block text-gray-50 md:mt-0 mr-10"
         >
           Descargas
         </Link>
         <Link
           to="/contacto"
-          className="block mt-4 md:inline-block text-gray-100 md:mt-0 mr-10"
+          className="block mt-4 md:inline-block text-gray-50 md:mt-0 mr-10"
         >
           Contacto
         </Link>
@@ -58,18 +124,6 @@ function NavbarNew2() {
           </button>
           <button className="py-2 px-6 bg-teal-500 hover:bg-teal-600 rounded-md text-white text-lg">
             Sign up
-          </button>
-        </div>
-        <div className="block lg:hidden">
-          <button className="flex items-center px-4 py-3 border rounded text-teal-500 border-teal-500 focus:outline-none">
-            <svg
-              className="fill-current h-3 w-3"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>Menu</title>
-              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-            </svg>
           </button>
         </div>
       </div>

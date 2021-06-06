@@ -24,7 +24,7 @@ function Layout({ children }) {
 
   return (
     <header className=" leading-normal tracking-normal">
-      <NavbarNew2 />
+      <NavbarNew />
       {/* {isOpen && <MenuMobile mobileOpen={toggleOpen} />} */}
       {children}
     </header>

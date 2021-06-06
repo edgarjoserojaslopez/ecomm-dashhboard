@@ -2,6 +2,14 @@ module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    listStyleType: {
+      none: "none",
+      disc: "disc",
+      decimal: "decimal",
+      square: "square",
+      roman: "upper-roman",
+      alpha: "lower-alpha",
+    },
     backgroundSize: {
       auto: "auto",
       cover: "cover",
@@ -25,7 +33,7 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    display: ["responsive", "group-hover", "group-focus"],
   },
   plugins: [require("tailwindcss"), require("autoprefixer")],
 };

@@ -1,41 +1,33 @@
 import React, { useEffect, useState } from "react";
-
+import { Link } from "react-router-dom";
 import RightSidebar from "../../helpers/RightSidebar";
 
 /* -- Variables Nombres Junta directiva -- */
-function createData(nombre, cargo) {
-  return { nombre, cargo };
+function createData(cargo, nombre, suplente) {
+  return { cargo, nombre, suplente };
 }
 
 const rows = [
-  createData("Héctor Rivas P.", "Presidente"),
-  createData("Alicia de Uzcátegui.", "Vice-Presidente"),
-  createData("Luis Hernández", "Tesorero"),
-  createData("Claudia Rodríguez", "Secretaria"),
-  createData("Ender Parra", "Vocal"),
-  createData("Gustavo Piñango", "Suplente"),
-  createData("Rubén Nuñez", "Suplente"),
-  createData("Antonio Tonelli", "Suplente"),
-  createData("Tibizay Valderrama", "Suplente"),
+  createData("Presidente", "Eloy Noriega", "Víctor Ojeda"),
+  createData("Tesorero", "María Elena Barrios", "Miguel Maneiro"),
+  createData("Secretario", "Alí León", "Raul Lucena"),
 ];
 
 const rowsSec = [
-  createData("Fernando Villasmil", "Presidente"),
-  createData("José Salinas", "Vice - Presidente"),
-  createData("Lisel Landa", "Secretaria"),
-  createData("Hernan Santana", "Suplente"),
-  createData("Elina Pou Ruan", "Suplente"),
+  createData("Presidente", "Dora Castillo", "Luis Vidal"),
+  createData("Tesorero", "Nestor Mendoza", "Daysi Seijas"),
+  createData("Secretario", "Josefina Casteleiro", "Julio Terán"),
 ];
 
 function Historia() {
   useEffect(() => {
-    document.title = "Historia CAPRES";
+    document.title = "Junta Directiva";
   }, []);
   return (
     <main className="flex  pt-12 md:pt-24 w-screen h-screen justify-center items-start ">
       <div className="p-4 mx-4 my-4">
         <p className="font-thin  pl-6 text-blue-600 text-3xl">
-          Historia de CAPRES - SENIAT
+          Junta Directiva CAPRES
         </p>
 
         <section className="flex items-center mx-auto  ">
